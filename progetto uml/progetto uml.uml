@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_UNW4kKGaEemdmLxJIswjvA" name="progetto uml">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_UpyV4KGaEemdmLxJIswjvA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PyjrwKGbEemdmLxJIswjvA" name="utente">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_SJHTcKGbEemdmLxJIswjvA" name="nome" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_cyCZ8KGbEemdmLxJIswjvA" name="cognome" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mX_nkKGbEemdmLxJIswjvA" name="indirizzo" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_rBxPEKGbEemdmLxJIswjvA" name="cap" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vssGEKGbEemdmLxJIswjvA" name="citta" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2jj3QKGbEemdmLxJIswjvA" name="telefono" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8g_fAKGbEemdmLxJIswjvA" name="email" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BFpp0KJIEemmELTydJvsjg" name="ordine" type="_gkmKgKIoEemmELTydJvsjg" association="_BFnNkKJIEemmELTydJvsjg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BFqQ4KJIEemmELTydJvsjg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BFqQ4aJIEemmELTydJvsjg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BHnr4KGcEemdmLxJIswjvA" name="libro">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_C3np4KGcEemdmLxJIswjvA" name="titolo" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ICt1wKGcEemdmLxJIswjvA" name="autore" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Nm_9sKGcEemdmLxJIswjvA" name="casa_editrice" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_RhTQEKGcEemdmLxJIswjvA" name="anno_publlicazione" visibility="public" type="_kq9JEKG-EemdmLxJIswjvA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6mJ1EKG-EemdmLxJIswjvA" name="ISBN" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__Z_XgKG-EemdmLxJIswjvA" name="genere" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Q0opcKG_EemdmLxJIswjvA" name="prezzo" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XmYDAKG_EemdmLxJIswjvA" name="descrizione" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_sj6LcKJEEemmELTydJvsjg" name="punti_card" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__KF8EKJHEemmELTydJvsjg" name="libri_ordine" type="_Kfj08KJHEemmELTydJvsjg" association="__KDf0KJHEemmELTydJvsjg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__KGjIKJHEemmELTydJvsjg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__KHKMKJHEemmELTydJvsjg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_kq9JEKG-EemdmLxJIswjvA" name="Date">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nh_AkKG-EemdmLxJIswjvA" name="day" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r4npoKG-EemdmLxJIswjvA" name="month" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vSvAEKG-EemdmLxJIswjvA" name="year" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_gkmKgKIoEemmELTydJvsjg" name="ordine">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2FwqQKJGEemmELTydJvsjg" name="codice" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8B2OMKJGEemmELTydJvsjg" name="data" visibility="public" type="_kq9JEKG-EemdmLxJIswjvA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Ay9z0KJHEemmELTydJvsjg" name="utente" visibility="public" type="_PyjrwKGbEemdmLxJIswjvA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_E1hDQKJHEemmELTydJvsjg" name="costo_totale" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_f5FXQKJHEemmELTydJvsjg" name="tipo_pagamento" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_isBY8KJHEemmELTydJvsjg" name="punti_ottenuti">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_AL0e0aJIEemmELTydJvsjg" name="libri_ordine" type="_Kfj08KJHEemmELTydJvsjg" association="_ALypoKJIEemmELTydJvsjg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AL1F4KJIEemmELTydJvsjg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AL1s8KJIEemmELTydJvsjg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Kfj08KJHEemmELTydJvsjg" name="libri_ordine">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_M-mDMKJHEemmELTydJvsjg" name="codice_ordine" visibility="public" type="_gkmKgKIoEemmELTydJvsjg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QdsAQKJHEemmELTydJvsjg" name="ISBN_libro" visibility="public" type="_BHnr4KGcEemdmLxJIswjvA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__KDf0KJHEemmELTydJvsjg" memberEnd="__KF8EKJHEemmELTydJvsjg __KHxQKJHEemmELTydJvsjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__KFVAKJHEemmELTydJvsjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__KFVAaJHEemmELTydJvsjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__KHxQKJHEemmELTydJvsjg" name="libro" type="_BHnr4KGcEemdmLxJIswjvA" association="__KDf0KJHEemmELTydJvsjg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ALypoKJIEemmELTydJvsjg" memberEnd="_AL0e0aJIEemmELTydJvsjg _AL2UAKJIEemmELTydJvsjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ALz3wKJIEemmELTydJvsjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AL0e0KJIEemmELTydJvsjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_AL2UAKJIEemmELTydJvsjg" name="ordine" type="_gkmKgKIoEemmELTydJvsjg" association="_ALypoKJIEemmELTydJvsjg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BFnNkKJIEemmELTydJvsjg" memberEnd="_BFpp0KJIEemmELTydJvsjg _BFq38KJIEemmELTydJvsjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BFobsKJIEemmELTydJvsjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BFpCwKJIEemmELTydJvsjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_BFq38KJIEemmELTydJvsjg" name="utente" type="_PyjrwKGbEemdmLxJIswjvA" association="_BFnNkKJIEemmELTydJvsjg"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5uDSwKGaEemdmLxJIswjvA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5uILQKGaEemdmLxJIswjvA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
