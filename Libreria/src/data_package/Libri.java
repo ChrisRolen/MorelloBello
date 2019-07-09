@@ -1,4 +1,6 @@
 package data_package;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Libri {
 	private String author[];
@@ -8,8 +10,9 @@ public class Libri {
 	private String genre;
 	private int price;
 	private String description;
+	private int numberofsoldcopies;
 	
-	public Libri(String autore[], String casa_editrice, int anno, int ISBN, String genere, int prezzo, String descrizione){
+	public Libri(String autore[], String casa_editrice, int anno, int ISBN, String genere, int prezzo, String descrizione, int numberofsoldcopies){
 		this.author = autore;
 		this.editor = casa_editrice;
 		this.year = anno;
@@ -17,6 +20,7 @@ public class Libri {
 		this.genre = genere;
 		this.price = prezzo;
 		this.description = descrizione;
+		this.numberofsoldcopies = numberofsoldcopies;
 	}
 	
 	public String[] getAuthor(){
@@ -87,10 +91,34 @@ public class Libri {
 			break;
 		
 		default:
-			System.out.println("Modifica non disponibile. Selezionare un numero da 1 a 7.");
+			throw new NoMemberToModifyException("Il membro selezionato non esiste! Selezionare un numero da 1 a 7");
 		}
 		
 		}
 	
-	
+	public int getNumberofsoldcopies() {
+		return numberofsoldcopies;
+	}
+
+	public ArrayList<Libri> classify(Libri... libris){
+		ArrayList<Libri> classifica = new ArrayList<Libri>();
+		
+		for(Libri a:libris){
+			classifica.add(a);
+		}
+		
+		classifica.sort(new Comparator<Libri>(){
+
+			@Override
+			public int compare(Libri arg0, Libri arg1) {
+				return arg0.numberofsoldcopies - arg1.numberofsoldcopies;
+			}
+			
+		});
+		
+		return classifica;
+	}
+
+
 }
+
