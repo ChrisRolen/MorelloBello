@@ -1,29 +1,43 @@
 package data_package;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-public class Libri {
-	private String author[];
+public class Libri extends database {
+	private String author;
 	private String editor;
 	private int year;
 	private int ISBN;
 	private String genre;
-	private int price;
+	private float price;
 	private String description;
 	private int numberofsoldcopies;
 	
-	public Libri(String autore[], String casa_editrice, int anno, int ISBN, String genere, int prezzo, String descrizione, int numberofsoldcopies){
-		this.author = autore;
-		this.editor = casa_editrice;
-		this.year = anno;
+	public Libri(int ISBN) throws SQLException{
+		rs = stmt.executeQuery("SELECT * from libri WHERE ISBN =" + ISBN);
+		
+		while(rs.next()){
+			
+		this.author = rs.getString("autori");
+		this.editor = rs.getString("casa_editrice");
+		this.year = rs.getInt("anno_pubblicazione");
 		this.ISBN = ISBN;
-		this.genre = genere;
-		this.price = prezzo;
-		this.description = descrizione;
-		this.numberofsoldcopies = numberofsoldcopies;
+		this.genre = rs.getString("genere");
+		this.price = rs.getFloat("prezzo");
+		this.description = rs.getString("descrizione");
+		this.numberofsoldcopies = rs.getInt("copie_vendute");
+		
+		}
+		
 	}
 	
-	public String[] getAuthor(){
+	public String getAuthor(){
 		return this.author;
 	}
 	
@@ -43,7 +57,7 @@ public class Libri {
 		return this.genre;
 	}
 	
-	public int getPrice(){
+	public float getPrice(){
 		return this.price;
 	}
 	
@@ -57,7 +71,7 @@ public class Libri {
 		case 1:
 			
 			if(modif instanceof String[])
-				this.author = (String[]) modif;
+				this.author = (String) modif;
 			break;
 			
 		case 2:
@@ -111,14 +125,33 @@ public class Libri {
 
 			@Override
 			public int compare(Libri arg0, Libri arg1) {
-				return arg0.numberofsoldcopies - arg1.numberofsoldcopies;
+				return arg0.getNumberofsoldcopies()- arg1.getNumberofsoldcopies();
 			}
 			
 		});
 		
 		return classifica;
 	}
+	
+	public ArrayList<Libri> classify() throws SQLException{
+		ArrayList<Libri> classifica = new ArrayList<Libri>();
+		rs = stmt.executeQuery("SELECT * from libri");
+		
+		while(rs.next()){
+			Libri book = new Libri(rs.getInt("IBSN"));
+			classifica.add(book);
+		}
+		
+		classifica.sort(new Comparator<Libri>(){
 
-
+			@Override
+			public int compare(Libri arg0, Libri arg1) {
+				return arg0.getNumberofsoldcopies()- arg1.getNumberofsoldcopies();
+			}
+			
+		});
+		
+		return classifica;
+	}
 }
 

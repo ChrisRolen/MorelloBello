@@ -1,6 +1,14 @@
 package data_package;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-public class Utenti {
+public class Utenti extends database{
 	private String name;
 	private String surname;
 	private String address;
@@ -11,17 +19,19 @@ public class Utenti {
 	private String password;
 	private int LibroCard;
 	
-	public Utenti(String name, String surname, String address, int cAP, String city, int phone_number, String email,
-			String password, int libroCard) {
-		this.name = name;
-		this.surname = surname;
-		this.address = address;
-		CAP = cAP;
-		this.city = city;
-		this.phone_number = phone_number;
+	public Utenti(String email) throws SQLException {
+		rs = stmt.executeQuery("SELECT * from utenti WHERE email =" + email);
+		while(rs.next()){
+		this.name = rs.getString("nome");
+		this.surname = rs.getString("cognome");
+		this.address = rs.getString("indirizzo");
+		CAP = rs.getInt("CAP");
+		this.city = rs.getString("citta");
+		this.phone_number = rs.getInt("telefono");
 		this.email = email;
-		this.password = password;
-		LibroCard = libroCard;
+		this.password = rs.getString("password");
+		LibroCard = rs.getInt("libro_card");
+		}
 	}
 
 	public String getName() {
@@ -60,6 +70,9 @@ public class Utenti {
 		return LibroCard;
 	}
 	
-	
+	public boolean isheanadmin(String email, String password) throws SQLException{
+		rs = stmt.executeQuery("SELECT * from responsabili WHERE email =" + email + "AND password =" + password);
+		return rs.next();
+	}
 	
 }
