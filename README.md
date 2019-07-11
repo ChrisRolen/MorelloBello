@@ -11,4 +11,5 @@ Aggiunto primo UML - Genna<br>
 
 Versione 1.1 (11/07)<br>
 Modificata la classe Libri in modo che sia adatta al Database. Aggiunta la seconda versione della classifica in base a tutti i libri presenti all'interno del Database - Lor<br>
-Modificata la classe Utenti in modo che sia adatta al Database. Aggiunto il metodo che verifica se un utente è un admin o meno. - Lor
+Modificata la classe Utenti in modo che sia adatta al Database. Aggiunto il metodo che verifica se un utente è un admin o meno. - Lor<br>
+Aggiunto schema della pagina principale e dei vari sottoschemi. Si attendono riscontri. - Lor
